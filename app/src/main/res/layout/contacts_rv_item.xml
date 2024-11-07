@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:padding="8dp">
+
+    <!--    &lt;!&ndash;image view for displaying the first letter of contact&ndash;&gt;-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/idIVContact"-->
+    <!--        android:layout_width="60dp"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_margin="8dp"-->
+    <!--        android:contentDescription="@mipmap/ic_launcher"-->
+    <!--        android:padding="3dp"-->
+    <!--        android:src="@mipmap/ic_launcher" />-->
+
+    <!--text view for displaying user name-->
+    <TextView
+        android:id="@+id/idTVContactName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:text="Contact Name"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/idTVPhoneNumber"
+        android:layout_toRightOf="@+id/idTVContactName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:text="Phone Number"
+        android:textColor="@color/black" />
+</RelativeLayout>

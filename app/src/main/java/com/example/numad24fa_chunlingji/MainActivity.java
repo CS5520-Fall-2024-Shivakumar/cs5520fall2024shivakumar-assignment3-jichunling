@@ -9,23 +9,26 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)  {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        Button showToastButton = findViewById(R.id.showToastButton);
-        showToastButton.setOnClickListener(new View.OnClickListener() {
+        Button aboutMe = (Button) findViewById(R.id.aboutMeButton);
+        aboutMe.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-            String message = "Name: Chunling Ji\nEmail: ji.chu@northeastern.edu";
-            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, AboutMeActivity.class);
+                startActivity(intent);
             }
         });
 
-        Button quicCalc = (Button)findViewById(R.id.quicCalc);
+        Button quicCalc = (Button) findViewById(R.id.quicCalc);
         quicCalc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,9 +37,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button contactCollector = (Button) findViewById(R.id.contactCollector);
+        contactCollector.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ContactCollectorActivity.class);
+                startActivity(intent);
+            }
+        });
     }
-
-
-
-
 }
