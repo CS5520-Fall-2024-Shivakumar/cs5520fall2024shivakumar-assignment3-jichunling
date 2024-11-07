@@ -17,7 +17,6 @@ import androidx.appcompat.widget.Toolbar;
 import java.util.Objects;
 
 public class CreateNewContactActivity extends AppCompatActivity {
-    //creating a new variable for our edit text and button.
     private EditText nameEdt, phoneEdt, emailEdt;
 
     @Override
